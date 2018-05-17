@@ -17,12 +17,17 @@
     <div>
         <button v-on:click="counter++">You've clicked this button {{counter}} times !</button>
     </div>
+    <udemy01/>
   </div>
+
 </template>
 
 <script>
+import Udemy01 from "./udemy01";
+
 export default {
   name: 'HelloWorld',
+  components: {Udemy01},
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
