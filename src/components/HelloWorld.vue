@@ -1,7 +1,22 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div>
+      <ul>
+        <li v-for="comp in compositions">
+          {{comp.name}}, associée au module : {{comp.moduleId}}
+        </li>
+      </ul>
+    </div>
 
+    <div>
+      <input type="text" v-model="input_val"/>
+      <span v-text="input_val"></span>
+    </div>
+
+    <div>
+        <button v-on:click="counter++">You've clicked this button {{counter}} times !</button>
+    </div>
   </div>
 </template>
 
@@ -10,7 +25,14 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      compositions: [
+        {moduleId: 1, name: 'Composition1'},
+        {moduleId: 2, name: 'Composition2'},
+        {moduleId: 3, name: 'Composition3'}
+      ],
+      input_val: '',
+      counter: 0
     }
   }
 }
