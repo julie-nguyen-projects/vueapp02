@@ -8,6 +8,8 @@ Vue.config.productionTip = false;
 
 Vue.use(VueResource);
 
+Vue.http.options.root = 'https://vuejs-httptest.firebaseio.com/data.json';
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
